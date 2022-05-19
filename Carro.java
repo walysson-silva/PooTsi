@@ -48,4 +48,28 @@ public class Carro {
     this.marcha = marcha;
   }
   // sets
+  public void frear(){
+    this.velocidade = velocidade - 5;
+    trocarMarcha();
+  }
+
+  public void acelerar () {
+    this.velocidade = velocidade + 10;
+    trocarMarcha();
+  }
+
+  public void trocarMarcha() {
+    if (velocidade > 10 && velocidade < 40) {
+      this.marcha = 2;
+    } else if (velocidade > 20 && velocidade < 40) {
+      this.marcha = 3;
+    } else if (velocidade > 30 && velocidade < 40) {
+      this.marcha = 4;
+    } else if (velocidade > 40 && velocidade < 70) {
+      this.marcha = 5;
+    } else {
+      this.marcha = 6;
+    }
+  
+  }
 }
